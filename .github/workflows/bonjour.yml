@@ -9,4 +9,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 23
-      - run: sudo npm install && npm run lint
+      - run: npm install
+      - run: npm run lint
