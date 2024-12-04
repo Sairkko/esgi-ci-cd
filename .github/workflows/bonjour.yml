@@ -9,5 +9,4 @@ jobs:
       options: --user=root
     steps:
       - uses: actions/checkout@v4
-      - run: npm clean-install
-      - run: npm run lint
+      - run: npm clean-install && npm run lint
