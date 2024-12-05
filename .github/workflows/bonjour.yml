@@ -5,10 +5,10 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
     env:
-      IMAGE_NAME: "node"
+      IMAGE_NAME: "mynode"
     steps:
       - uses: actions/checkout@v4
       - run: docker image build --tag="${IMAGE_NAME}" ./
       # Uncomment to validate your work (should fail the next step)
-      - run: echo 'Hello Error' > ./index.js
+      # - run: echo 'Hello Error' > ./index.js
       - run: docker container run --volume="$(pwd)":/app "${IMAGE_NAME}" npm run lint

@@ -3,4 +3,4 @@ WORKDIR /app
 COPY ./package.json /app/
 COPY ./package-lock.json /app/
 RUN npm clean-install
-RUN npm install -g jshint
+RUN npm install -g
