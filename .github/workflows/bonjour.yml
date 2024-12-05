@@ -12,6 +12,4 @@ jobs:
         with:
           dockerfile: Dockerfile
       - run: docker image build --tag="${IMAGE_NAME}" ./
-      # Uncomment to validate your work (should fail the next step)
-      # - run: echo 'Hello Error' > ./index.js
       - run: docker container run --volume="$(pwd)":/app "${IMAGE_NAME}" npm run lint
