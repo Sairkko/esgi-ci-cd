@@ -5,7 +5,7 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
     env:
-      IMAGE_NAME: "mynode"
+      IMAGE_NAME: "node"
     steps:
       - uses: actions/checkout@v4
       - run: docker image build --tag="${IMAGE_NAME}" ./
